@@ -1,0 +1,28 @@
+with "/opt/ada/2021/share/gpr/unix_utils.gpr";
+with "/opt/GNAT/2021/share/gpr/gnatcoll_syslog.gpr";
+with "/opt/ada/2021/share/gpr/adabase.gpr";
+
+project Intsage_Graph is
+
+   for Source_Dirs use ("/home/src/build/Ada/intsage_graph/src");
+   for Object_Dir use "obj";
+   for Main use ("intsage_graph.adb");
+
+   package Compiler is
+      for Switches ("ada") use ("-gnatVtsrpmoifec", "-gnatwc.cd.ff.gh.hjk.kl.lm.op.pr.r.stu.u.w.x", "-gnatyxutSsrpOonlkIihfedCcBbAa");
+   end Compiler;
+
+   package Ide is
+      for Vcs_Kind use "git";
+   end Ide;
+
+   package Linker is
+      for Switches ("ada") use ("-lmariadb");
+   end Linker;
+
+   package Builder is
+      for Global_Compilation_Switches ("ada") use ("-pg");
+   end Builder;
+
+end Intsage_Graph;
+
